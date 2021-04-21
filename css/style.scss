@@ -28,6 +28,26 @@ $yellow:#ffD800;
     &:hover:before{width:100%}
 }
 
+
+@mixin headings {
+    padding:7rem 0rem 2rem 0rem;    
+    h1{ 
+        font-size:3rem;
+        font-weight: bolder;
+        color:#fff;
+          span{
+            color:$yellow;
+            }
+    }
+    p{
+        margin:2rem 0rem 4rem 0rem;
+        font-size:1.5rem;
+        color:#fff;
+    }
+
+    
+}
+
 *{
     margin:0;
     padding:0;
@@ -92,7 +112,33 @@ body{
     }
 }
 
-//home
+//home section starts
+
+
+#home{
+    .content{
+        h1{
+            font-size:4rem;
+            color:$yellow;
+            font-family: 'lemonda',sans-serif;
+            text-shadow: .1rem .1rem .3rem #333;
+        }
+        h2{
+            font-size:3rem;
+            color:#fff;
+            font-family: 'lemonda',sans-serif;
+            text-shadow: .1rem .1rem .3rem #333;
+            margin:1rem 0;
+        }
+        p{
+            font-size:1.6rem;
+            color:#ccc;
+        }
+        button{
+            @include button(4rem,16rem);
+        }
+    }
+}
 
 #home{
     background: linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
@@ -104,6 +150,8 @@ body{
         width:100%;
         z-index:-1;
         .vid{
+            position: absolute;
+            top:0;left:0;
             height:100vh;
             width:100%;
             object-fit: cover;
@@ -136,7 +184,20 @@ body{
     }
 }
 
-// media quires
+//home section ends
+
+//special section starts
+#special{
+        background: #000;
+        min-height: 100vh;
+        .heading{
+        @include headings();
+        }
+}
+
+
+//special section ends
+// media quires start
 
 @media (max-width:750px){
     html{
@@ -182,28 +243,4 @@ body{
         }
     }
 }
-
-#home{
-    .content{
-        h1{
-            font-size:4rem;
-            color:$yellow;
-            font-family: 'lemonda',sans-serif;
-            text-shadow: .1rem .1rem .3rem #333;
-        }
-        h2{
-            font-size:3rem;
-            color:#fff;
-            font-family: 'lemonda',sans-serif;
-            text-shadow: .1rem .1rem .3rem #333;
-            margin:1rem 0;
-        }
-        p{
-            font-size:1.6rem;
-            color:#ccc;
-        }
-        button{
-            @include button(4rem,16rem);
-        }
-    }
-}
+// media quires ends
