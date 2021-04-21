@@ -40,7 +40,7 @@ $yellow:#ffD800;
             }
     }
     p{
-        margin:2rem 0rem 4rem 0rem;
+        padding:0rem 0rem 4rem 0rem;
         font-size:1.5rem;
         color:#fff;
     }
@@ -72,7 +72,7 @@ body{
     left:0;
     display: flex;
     justify-content: space-between;
-    padding:2rem 4rem;
+    padding:1rem 4rem;
     z-index:1000;
    
     nav{
@@ -105,12 +105,19 @@ body{
     }
     .logo{
         img{
-            height:5rem;
+            height:3.5rem;
         }
 
 
     }
 }
+
+.header-active{
+    background: #333;
+    box-shadow: 0rem .3rem .5rem #000;
+
+}
+
 
 //home section starts
 
@@ -193,10 +200,49 @@ body{
         .heading{
         @include headings();
         }
+        .card-container{
+            width: 95%;
+            display: flex;
+            margin:0rem auto;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            .card{
+                width: 30rem;
+                height:35rem;
+                margin:2rem;
+                padding:1rem;
+                text-align: center;
+                img{
+                    width:100%;
+                    
+                }
+                p{
+                    font-size:1.4rem;
+                    margin:2rem 0rem 2rem 0rem;
+                }
+                button{
+                    @include button(3rem, 14rem);
+                    background:#333;
+                    color:#fff;
+                    &:hover{
+                        color:#333;
+                    }
+                }
+                &:hover{
+                    transform: scale(.9);
+                }
+            }
+        }
 }
 
 
 //special section ends
+
+
+//about us section start
+
+//about us section end
 // media quires start
 
 @media (max-width:750px){

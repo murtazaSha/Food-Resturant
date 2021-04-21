@@ -29,7 +29,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   z-index: 1000;
 }
 
@@ -68,7 +68,13 @@ body {
 }
 
 #header .logo img {
-  height: 5rem;
+  height: 3.5rem;
+}
+
+.header-active {
+  background: #333;
+  -webkit-box-shadow: 0rem .3rem .5rem #000;
+          box-shadow: 0rem .3rem .5rem #000;
 }
 
 #home .content h1 {
@@ -201,9 +207,85 @@ body {
 }
 
 #special .heading p {
-  margin: 2rem 0rem 4rem 0rem;
+  padding: 0rem 0rem 4rem 0rem;
   font-size: 1.5rem;
   color: #fff;
+}
+
+#special .card-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#special .card-container .card {
+  width: 30rem;
+  height: 35rem;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#special .card-container .card img {
+  width: 100%;
+}
+
+#special .card-container .card p {
+  font-size: 1.4rem;
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+#special .card-container .card button {
+  height: 3rem;
+  width: 14rem;
+  border: none;
+  outline: none;
+  background: #fff;
+  letter-spacing: .2rem;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+}
+
+#special .card-container .card button::before {
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #ffD800;
+  position: absolute;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  z-index: -1;
+}
+
+#special .card-container .card button:hover:before {
+  width: 100%;
+}
+
+#special .card-container .card button:hover {
+  color: #333;
+}
+
+#special .card-container .card:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @media (max-width: 750px) {

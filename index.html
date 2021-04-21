@@ -86,6 +86,28 @@
  
 <!-- special card section ends -->
 
+<!-- about section start -->
+<section id="about" class="container">
+    <div class="about-container">
+        <div class="heading text-center">
+            <h1>about<span> us</span></h1>
+        </div>
+            <div class="row min-vh-100">
+                <div class="col-md-6 text-md-left text-center align-self-center content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, id nisi! Consequuntur ab, animi ratione dolores voluptatem maiores, fugit omnis voluptate alias modi beatae laboriosam?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos veritatis neque porro sapiente officiis cum.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, obcaecati?</p>
+                    <a href="#"><button>learn more</button></a>
+                </div>
+                <div class="col-md-6 image">
+                    <img src="images/chef1.png" alt="aboutUschef">
+                </div>
+            </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+
 <!-- Jquery sections -->
 
     <script src="js/jquery.min.js"></script>
@@ -120,6 +142,17 @@
                 $('.vid2').css('display','none');
                 $('.vid1').css('display','none');
             });
+
+           //it will check the scrolling of window from to  
+            $(window).on('scroll load',function(){
+                if($(window).scrollTop()>20){
+                    $('#header').addClass('header-active');
+                }else{
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+
         });
 
         
