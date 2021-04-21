@@ -1,0 +1,15 @@
+/* fonts */
+@font-face{
+    font-family: "Exo 2";
+    src:url(./google/Exo2-Light.ttf);
+}
+
+@font-face{
+    font-family: "lobster";
+    src:url(./lobster/Lobster-Regular.ttf);
+}
+
+@font-face{
+    font-family: "lemonda";
+    src:url(./lemonda/Lemonada-Medium.ttf);
+}

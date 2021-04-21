@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Exo 2',sans-serif;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 4rem;
+  z-index: 1000;
+}
+
+#header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+#header nav ul li {
+  margin-right: 4rem;
+}
+
+#header nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#header nav ul li a:hover {
+  color: #ffD800;
+}
+
+#header .fa-hamburger {
+  font-size: 4rem;
+  color: #ffD800;
+  cursor: pointer;
+  z-index: 10000;
+  display: none;
+}
+
+#header .logo img {
+  height: 5rem;
+}
+
+#home {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  min-height: 100vh;
+}
+
+#home .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+#home .video-container .vid {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+
+#home .video-container .vid1 {
+  display: block;
+}
+
+#home .controls {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 10rem;
+  height: 2rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#home .controls .dots {
+  background: #ffD800;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+#home .controls .dots:hover {
+  background: white;
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+  #header .fa-hamburger {
+    display: block;
+  }
+  #header .fa-times {
+    -webkit-transform: skew(-180deg);
+            transform: skew(-180deg);
+  }
+  #header nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 34rem;
+    background: #000;
+  }
+  #header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  #header nav ul li {
+    margin: 2rem 0;
+  }
+  #header nav ul li a {
+    font-size: 3.5rem;
+    border-radius: 5rem;
+  }
+  #header nav ul li a:hover {
+    padding: .7rem 7.5rem;
+    background: #ffD800;
+    color: #000;
+  }
+  #header .nav-toggle {
+    left: 0px;
+  }
+}
+
+#home .content h1 {
+  font-size: 4rem;
+  color: #ffD800;
+  font-family: 'lemonda',sans-serif;
+  text-shadow: .1rem .1rem .3rem #333;
+}
+
+#home .content h2 {
+  font-size: 3rem;
+  color: #fff;
+  font-family: 'lemonda',sans-serif;
+  text-shadow: .1rem .1rem .3rem #333;
+  margin: 1rem 0;
+}
+
+#home .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+}
+
+#home .content button {
+  height: 4rem;
+  width: 16rem;
+  border: none;
+  outline: none;
+  background: #fff;
+  letter-spacing: .2rem;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#home .content button::before {
+  content: '';
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #ffD800;
+  position: absolute;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  z-index: -1;
+}
+
+#home .content button:hover:before {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

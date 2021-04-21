@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Responsive Food/Resturant Webdesign </title>
+    <link rel="stylesheet" href="fonts/fontawsome.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="fonts/google-font.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<!-- header section start -->
+
+<header id="header">
+    <nav>
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#special">special</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#dishes">dishes</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+     
+    </nav>
+    <div class="fas fa-hamburger"></div>   
+    <a href="#" class="logo"><img src="./images/logo.png" alt="food-icon" ></a>  
+</header>
+
+<!-- header section end -->
+
+<!-- home section start -->
+<section id="home" class="container-fluid">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-md-8 ml-md-5 text-md-left text-center content">
+                    <h1>Food that you can't resist</h1>
+                    <h2>Enjoy the marvelous taste</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officia, suscipit assumenda eum tempore corrupti. </p>
+                    <a href="#special"><button>get started</button></a>
+                </div>
+            </div>
+            <div class="video-container">
+                <video src="images/vid2.mp4" class="vid vid1" autoplay loop  ></video>
+                <video src="images/vid4.mp4" class="vid vid2" autoplay loop  ></video>
+                <video src="images/vid3.mp4" class="vid vid3" autoplay   loop  ></video>
+            </div>
+ 
+  <div class="controls">
+      <div class="dots dot1"></div>
+      <div class="dots dot2"></div>
+      <div class="dots dot3"></div>
+  </div>          
+</section>
+<!-- home section end -->
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $('.fa-hamburger').click(function(){
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+
+            $('nav ul li a').click(function(){
+                $('.fa-hamburger').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+            $('.dot1').click(()=>{
+                $('.vid1').css('display','block');
+                $('.vid2').css('display','none');
+                $('.vid3').css('display','none');
+            });
+
+            $('.dot2').click(()=>{
+                $('.vid2').css('display','block');
+                $('.vid1').css('display','none');
+                $('.vid3').css('display','none');
+            });
+
+            $('.dot3').click(()=>{
+                $('.vid3').css('display','block');
+                $('.vid2').css('display','none');
+                $('.vid1').css('display','none');
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
