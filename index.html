@@ -185,20 +185,20 @@
             <h1>Contact<span> Us</span></h1>
         </div>
         <div class="contact-input-form row justify-content-center">
-            <form action="" class="inputform col-md-7">
+            <form action="" class="inputform col-md-7 ">
                 <div class="inputfiled">
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" var required>
                     <h3>Full Name</h3>
                 </div>
                 <div class="inputfiled">
-                    <input type="email" name="Email" id="email">
+                    <input type="email" style="text-transform: lowercase;" name="Email" id="email" required >
                     <h3>Email Address</h3>
                 </div>
                 <div class="inputfiled">
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
                     <h3>Message</h3>
                 </div>
-                
+                <input type="submit" value="send">
             </form>
         </div>
     </div>
@@ -206,6 +206,55 @@
 
 
 <!-- contact section ends -->
+
+<!-- footer section starts -->
+<footer id="footer">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center brand">
+            <a href="#home">
+                <img src="images/logo.png" alt="logo img">
+            </a>
+            <div class="social-icons">
+                <a href="#" > <span class="fab fa-facebook-square"></span></a>
+                <a href="#"><span class="fab fa-facebook-messenger"></span></a>
+                <a href="#"><span class="fab fa-pinterest-square"></span></a>
+                <a href="#"><span class="fab fa-twitter-square"></span></a>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="links">
+                <h1>Links:</h1>
+                <a href="#home">
+                    <h3>home</h3>
+                </a>
+                <a href="#special">
+                    <h3>Special</h3>
+                </a>
+                <a href="#abour">
+                    <h3>about</h3>
+                </a>
+                <a href="#dishes">
+                    <h3>dishes</h3>
+                </a>
+                <a href="#contact">
+                    <h3>contact</h3>
+                </a>
+
+            </div>
+        </div>
+        <div class="col-md-4 text-md-left text-center newslet">
+            <h3>Newsletter</h3>
+            <div ><input type="text" name="newsletter" id="newsletter"></div>
+            <div><input type="submit" value="subscribe"></div> 
+        </div>
+    </div>
+    <div class="text-center rights">
+        <span>
+            &copy; copyrites @2021 by <span>padki</span> 
+        </span>
+    </div>
+</footer>
+<!-- footer section ends -->
 
 <!-- Jquery sections -->
 

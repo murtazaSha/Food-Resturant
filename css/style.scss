@@ -359,6 +359,50 @@ body{
                 margin: 1rem 2rem;
                 border-radius: 1rem;
                 box-shadow: 0 0 2rem #333;
+                .inputfiled{
+                    position:relative;
+                    padding:0;
+                    text-align: center;
+                    input,textarea{
+                        outline:none;
+                        width: 90%; 
+                        font-size: 2rem;
+                        margin:2rem 0rem;
+                        padding:0rem 1rem;
+                        border:.2rem solid #333;
+                        height:4rem;
+                        background: none;
+                        border-radius:.2rem ;
+                        &:focus ~ h3, &:valid ~ h3{
+                            font-size:1.6rem;
+                            color:#333;
+                            left:5%;
+                            top:0rem;
+                          }
+                        }
+                        textarea{
+                            height:20rem;
+                            resize:none;
+                        }
+                        h3{
+                            position:absolute;
+                            font-size:2rem;
+                            top:2.7rem;
+                            left:6.5%;
+                        }
+                    
+                }
+                input[type="submit"]{
+                    @include button(4rem,13rem);
+                    margin-left: 4%;
+                    margin-bottom:2rem;
+                    background:#333;
+                    color:#fff;
+                    &:hover{
+                        background: $yellow;
+                        color:#333;
+                    }
+                }
             }
             
         }
@@ -368,6 +412,94 @@ body{
 
 //contact status end
 
+//footer start
+#footer{
+    background: #333;
+    padding-top:2rem;
+    .brand{
+        margin:1rem 0rem;
+        a{
+            img{
+                height:4rem;
+                margin:1rem 0rem;
+                }
+
+        }
+        .social-icons{
+            a{
+                span{
+                    color:#fff;
+                    font-size:1.5rem;
+                    margin:2rem 1rem;
+
+                }
+                &:hover span{
+                    color:$yellow;
+                }
+            }
+        }
+        
+    }
+    .links{
+        h1{
+            font-size:2rem;
+            color:$yellow;
+        }
+        a{
+            display: inline;
+            text-decoration:none;
+            h3{
+              
+                font-size: 1.8rem;
+                color:#fff;
+            }
+            &:hover h3{
+                color:$yellow;
+            }
+        }
+       
+    }
+    .newslet{
+        
+         
+            h3{
+                color:#fff;
+                font-size:1.8rem;
+                margin:2rem 0rem;
+             }
+             #newsletter{
+                 background: none;
+                 font-size:1.4rem;
+                 color:#FFF;
+                 outline:none;
+                 width:20rem;
+                 border:1px solid #fff; 
+                 margin:1rem 0rem; 
+             }
+             input[type="submit"]{
+                 @include button(3rem,12rem);
+                background: rgb(153, 153, 128);
+                color:#fff;
+                &:hover{
+                    background: $yellow;
+                    color:#333;
+                }
+             }
+
+    }
+    .rights{
+        margin-top:2rem;
+        span{
+            font-size: 1.5rem;
+            color: #fff;
+            span{
+                color:$yellow;
+            }
+        }
+      
+    }
+}
+//footer ends
 
 // media quires start
 
